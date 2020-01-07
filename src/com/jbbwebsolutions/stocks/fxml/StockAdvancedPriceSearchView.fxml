@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="ApStock" prefHeight="670.0"
+	prefWidth="847.0" xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.jbbwebsolutions.stocks.fxml.StockController">
+	<children>
+		<TableView fx:id="tvStocks" layoutX="34.0" layoutY="136.0"
+			prefHeight="424.0" prefWidth="758.0">
+			<columns>
+				<TableColumn fx:id="CoSymbol" prefWidth="195.0"
+					text="Stock Symbol">
+					<cellValueFactory>
+						<PropertyValueFactory property="symbol" />
+
+					</cellValueFactory>
+				</TableColumn>
+
+				<TableColumn fx:id="CoName" minWidth="0.0"
+					prefWidth="168.0" text="Stock Name">
+					<cellValueFactory>
+						<PropertyValueFactory property="name" />
+
+					</cellValueFactory>
+				</TableColumn>
+
+				<TableColumn fx:id="CoPrice" minWidth="0.0"
+					prefWidth="186.0" text="Current Price">
+					<cellValueFactory>
+						<PropertyValueFactory property="price" />
+
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="CoCatagories" minWidth="0.0"
+					prefWidth="206.0" text="Catagories">
+					<cellValueFactory>
+						<PropertyValueFactory property="price" />
+					</cellValueFactory>
+				</TableColumn>
+
+			</columns>
+		</TableView>
+		<Label fx:id="LblTitle" layoutX="371.0" layoutY="14.0"
+			text="Search By Price " />
+		<Label layoutX="63.0" layoutY="55.0" text="Symbol" />
+		<TextField fx:id="TxTfd" layoutX="131.0" layoutY="51.0"
+			onKeyReleased="#OnKeyReleased" />
+		<Button fx:id="Search_btn" disable="true" layoutX="312.0"
+			layoutY="51.0" mnemonicParsing="false" onAction="#search"
+			text="Search" />
+		<Label fx:id="lbl_Message" layoutX="42.0" layoutY="601.0"
+			prefHeight="16.0" prefWidth="654.0" />
+		<Label layoutX="40.0" layoutY="112.0" prefHeight="16.0"
+			prefWidth="654.0" text="Enter in All to see all Rows" />
+		<RadioButton fx:id="SimpleRadio" layoutX="456.0"
+			layoutY="55.0" mnemonicParsing="false" onAction="#SearchMode"
+			text="Simple Search">
+			<toggleGroup>
+				<ToggleGroup fx:id="TGSearchMode" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="AdvancedRadio" layoutX="456.0"
+			layoutY="89.0" mnemonicParsing="false" onAction="#SearchMode"
+			text="Advanced Search" toggleGroup="$TGSearchMode" />
+		<RadioButton fx:id="PriceSearch" layoutX="587.0"
+			layoutY="54.0" mnemonicParsing="false" onAction="#SearchMode"
+			selected="true" text="Advanced Price Search"
+			toggleGroup="$TGSearchMode" />
+		<Label layoutX="23.0" layoutY="88.0" text="Search By Price" />
+		<TextField fx:id="TxTfdPrice" layoutX="131.0" layoutY="84.0"
+			onKeyReleased="#OnKeyReleased" />
+	</children>
+</AnchorPane>

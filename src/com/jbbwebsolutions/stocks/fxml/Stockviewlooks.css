@@ -1,0 +1,51 @@
+.apStock1{
+		   -fx-background-color: #e7dcdc;
+	
+}
+
+.apStock2{
+		   -fx-background-color: #0e5e5e;
+	
+}
+
+.pie{
+		   -fx-background-color: #e8d102;
+	
+}
+
+.sec{
+			   -fx-min-width: 200;
+			   -fx-padding: 3;
+			   -fx-border-color: black;
+			    -fx-border-width: 5px 3px 5px 3px;
+				-fx-border-style: solid;
+	
+}
+.position{
+	
+	-fx-text-align: center;
+	
+}
+ #fpSector{
+		   -fx-border-color:  green;
+	
+}
+
+#tvStock{
+			   -fx-background-color: #ffffff;
+	
+}
+
+#btnSearch{
+		   -fx-border-color:  #0d0101;
+		   -fx-background-color: white;
+		   
+	
+}
+
+
+.name {
+   -fx-text-fill: #0d0101; 
+   
+}
+

@@ -1,0 +1,1 @@
+mongoimport --db=stockdb --collection=stocks --file=stocks.json --drop

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="apLayout" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="602.0" prefWidth="1119.0" stylesheets="@Stockviewlooks.css"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.jbbwebsolutions.stocks.fxml.StockController.java">
+	<children>
+		<VBox fx:id="vbLayout" layoutX="200.0" layoutY="125.0"
+			prefHeight="300.0" prefWidth="750.0" styleClass="apStock2">
+			<children>
+				<PieChart fx:id="pieProduct" />
+			</children>
+		</VBox>
+		<Label fx:id="lblTitle" layoutX="536.0" layoutY="41.0"
+			text="Pie Chart" />
+		<RadioButton fx:id="rbPiechart" layoutX="756.0"
+			layoutY="484.0" mnemonicParsing="false" onAction="#searchMode"
+			selected="true" text="Pie Chart">
+			<toggleGroup>
+				<ToggleGroup fx:id="tgSearchMode" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="rbAdvancedfilter" layoutX="566.0"
+			layoutY="484.0" mnemonicParsing="false" onAction="#searchMode"
+			text="advanced search filter" toggleGroup="$tgSearchMode" />
+		<RadioButton fx:id="rbAdvanced" layoutX="414.0"
+			layoutY="484.0" mnemonicParsing="false" onAction="#searchMode"
+			text="advanced search" toggleGroup="$tgSearchMode" />
+		<RadioButton fx:id="rbSimple" layoutX="280.0"
+			layoutY="484.0" mnemonicParsing="false" onAction="#searchMode"
+			text="simple search" toggleGroup="$tgSearchMode" />
+	</children>
+	<styleClass>
+		<String fx:value="pie" />
+		<String fx:value="sec" />
+	</styleClass>
+</AnchorPane>
